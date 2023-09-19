@@ -1,4 +1,4 @@
 /node_modules
 /excel-files
-
+/uploads
 .env
