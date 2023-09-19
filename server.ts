@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
-import app from "./app";
 dotenv.config();
+import app from "./app";
 
 process.on("uncaughtException", (err) => {
   console.log(`${err.name} : ${err.message}`);
