@@ -24,6 +24,8 @@ const upload = multer({ storage });
 
 const router = express.Router();
 
-router.post("/", upload.single("file"), fileController.uploadFile);
+router
+  .get("/", fileController.getFile)
+  .post("/", upload.single("file"), fileController.updateFile);
 
 export = router;
