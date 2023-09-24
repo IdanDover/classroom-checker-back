@@ -2,7 +2,9 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 import fileController from "../controllers/fileController";
+import { todo } from "node:test";
 
+//TODO: check for a way to not save the file to disk
 const storage = multer.diskStorage({
   destination: function (
     _req: any,

@@ -1,13 +1,11 @@
 import client from "./redis";
 
 const getFile = async (fileTime: string) => {
-  const data = await client.getAsync(fileTime);
-  console.log(data);
-
-  return data;
-};
-const setFile = async (fileTime: string, data: any) => {
-  return await client.setAsync(fileTime, "moshe");
+  return await client.getAsync(fileTime);
 };
 
-export = { getFile, setFile };
+const updateFile = async (fileTime: string, data: any) => {
+  return await client.setAsync(fileTime, data);
+};
+
+export = { getFile, updateFile };
