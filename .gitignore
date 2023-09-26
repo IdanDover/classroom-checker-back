@@ -1,8 +1,8 @@
 /node_modules
 /uploads
+.env
 
 #/excel-files
-#.env
 
 
 
