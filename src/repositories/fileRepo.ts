@@ -1,11 +1,11 @@
 import client from "./redis";
 
 const getFile = async (fileTime: string) => {
-  return await client.getAsync(fileTime);
+  return await client.get(fileTime);
 };
 
 const updateFile = async (fileTime: string, data: any) => {
-  return await client.setAsync(fileTime, data);
+  return await client.set(fileTime, data);
 };
 
 export = { getFile, updateFile };

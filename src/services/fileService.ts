@@ -3,7 +3,7 @@ import fileRepo from "../repositories/fileRepo";
 import { parseForRedis } from "../utils/excelUtils";
 
 const getFile = async (fileTime: any) => {
-  const data = await fileRepo.getFile(fileTime);
+  const data = (await fileRepo.getFile(fileTime)) ?? "data was not received";
   return JSON.parse(data);
 };
 
