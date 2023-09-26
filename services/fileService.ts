@@ -1,6 +1,6 @@
 import xlsx from "node-xlsx";
 import fileRepo from "../repositories/fileRepo";
-import { parseForRedis } from "../utils/redisUtils";
+import { parseForRedis } from "../utils/excelUtils";
 
 const getFile = async (fileTime: any) => {
   const data = await fileRepo.getFile(fileTime);

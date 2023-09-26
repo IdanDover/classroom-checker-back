@@ -1,4 +1,8 @@
 /node_modules
-/excel-files
 /uploads
-.env
+
+#/excel-files
+#.env
+
+
+#docker run -d --name redis -p 127.0.0.1:6379:6379 redis

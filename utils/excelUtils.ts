@@ -21,12 +21,15 @@ const parseToFloors = (data: Array<any>) => {
       parsedData[`floor${floorNum}`] = [];
     }
 
+    //NOTE: I destructure the values as such because this is how the excel file I parse is organized
+    const [className, courseSet, camera, courseName, comments] = el;
+
     parsedData[`floor${floorNum}`].push({
-      name: el[0],
-      courseSet: el[1],
-      camera: el[2],
-      courseName: el[3],
-      comments: el[4],
+      className,
+      courseSet,
+      camera,
+      courseName,
+      comments,
     });
   });
 
@@ -45,6 +48,6 @@ const parseForRedis = (file: Array<any>) => {
   return readyForRedis;
 };
 
-const RedisUtils = { parseForRedis };
+const excelUtils = { parseForRedis };
 
-export = RedisUtils;
+export = excelUtils;
