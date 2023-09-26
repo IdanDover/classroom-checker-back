@@ -1,7 +1,7 @@
 const redis = require("redis");
 const { promisify } = require("util");
 
-const client = redis.createClient(6379, "127.0.0.1");
+const client = redis.createClient(6379, process.env.REDIS_URl);
 
 client.on("error", (err: any) => console.log("Redis Client Error", err));
 
