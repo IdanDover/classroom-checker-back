@@ -49,8 +49,8 @@ const updateFiles = async (files: any) => {
     throw new Error("problem saving old file");
   }
 
-  removeFileFromUploads(files.noon[0].fileName);
-  removeFileFromUploads(files.evening[0].fileName);
+  removeFileFromUploads(files.noon[0].filename);
+  removeFileFromUploads(files.evening[0].filename);
 
   return "OK";
 };
