@@ -11,4 +11,9 @@ const updateFile = async (req: Request, res: Response) => {
   res.status(201).json({ status: "success", data });
 };
 
-export = { updateFile, getFile };
+const updateFiles = async (req: Request, res: Response) => {
+  const data = await fileService.updateFiles(req.files);
+  res.status(201).json({ status: "success", data });
+};
+
+export = { updateFile, getFile, updateFiles };

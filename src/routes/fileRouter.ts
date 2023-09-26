@@ -29,4 +29,13 @@ router
   .get("/", fileController.getFile)
   .post("/", upload.single("file"), fileController.updateFile);
 
+router.post(
+  "/today",
+  upload.fields([
+    { name: "noon", maxCount: 1 },
+    { name: "evening", maxCount: 1 },
+  ]),
+  fileController.updateFiles
+);
+
 export = router;
