@@ -1,36 +1,69 @@
-const removeUnwantedData = (file: Array<any>) => {
-  //NOTE:The values are hard coded according to the length of the excel file
-  const data = file.slice(4, -13);
-  return data;
+//TODO: ask Oren to change the format of the excel file to make the logic easier
+//NOTE:Some values are hardcoded because of the format of the excel file
+const isClassroom = (potentialClassroom: Array<any>) => {
+  if (potentialClassroom.length !== 5 && potentialClassroom.length !== 6) {
+    return false;
+  }
+
+  if (potentialClassroom[0] / 100 < 10) {
+    return true;
+  }
+
+  if (
+    potentialClassroom[0] === "604+605" ||
+    potentialClassroom[0] === "414-416"
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
+const isTask = (potentialTask: Array<any>) => {
+  return potentialTask.length === 3 && potentialTask[0] < 10;
 };
 
 const parseToFloors = (data: Array<any>) => {
-  //NOTE:The values are hard coded according to the length of the excel file
-  //TODO: check for the hard coded values if you can throw them somewhere
   let floorNum = 0;
   let parsedData: any = {
-    tasks: data.pop(),
+    tasks: [],
   };
   data.forEach((el: Array<any>) => {
-    if (isNaN(el[0])) {
+    if (!el[0]) {
       return;
     }
 
-    if (Math.floor(el[0] / 100) !== floorNum) {
-      floorNum = Math.floor(el[0] / 100);
-      parsedData[`floor${floorNum}`] = [];
+    if (isClassroom(el)) {
+      //NOTE:The destructuring is according to the format of the excel file
+      const [classNum, courseSet, camera, courseName, comments] = el;
+
+      if (
+        typeof classNum !== "string" &&
+        Math.floor(classNum / 100) !== floorNum
+      ) {
+        floorNum = Math.floor(classNum / 100);
+        parsedData[`floor${floorNum}`] = [];
+      }
+
+      parsedData[`floor${floorNum}`].push({
+        classNum,
+        courseSet,
+        camera,
+        courseName,
+        comments,
+      });
     }
 
-    //NOTE: I destructure the values as such because this is how the excel file I parse is organized
-    const [className, courseSet, camera, courseName, comments] = el;
+    if (isTask(el)) {
+      //NOTE:The destructuring is according to the format of the excel file
+      const [taskNum, set, description] = el;
 
-    parsedData[`floor${floorNum}`].push({
-      className,
-      courseSet,
-      camera,
-      courseName,
-      comments,
-    });
+      parsedData.tasks.push({
+        taskNum,
+        set,
+        description,
+      });
+    }
   });
 
   return parsedData;
@@ -40,8 +73,7 @@ const stringify = (parsed: object) => {
   return JSON.stringify(parsed);
 };
 
-const parseForRedis = (file: Array<any>) => {
-  const data = removeUnwantedData(file);
+const parseForRedis = (data: Array<any>) => {
   const parsedData = parseToFloors(data);
   const readyForRedis = stringify(parsedData);
 

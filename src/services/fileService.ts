@@ -11,6 +11,8 @@ const getFile = async (fileTime: any) => {
 const updateFile = async (fileTime: any, filename: any) => {
   const worksheet = xlsx.parse(`${__dirname}/../../uploads/${filename}`);
   const data = worksheet[Number(process.env.SHEET_NUM)].data;
+  // console.log(data);
+
   const newData = parseForRedis(data);
   removeFileFromUploads(filename);
 
@@ -41,7 +43,6 @@ const updateFiles = async (files: any) => {
   if (noonResponse !== "OK" || eveningResponse !== "OK") {
     throw new Error("problem saving files");
   }
-  console.log(oldData);
 
   const oldResponse = await fileRepo.updateFile("old", oldData);
 
