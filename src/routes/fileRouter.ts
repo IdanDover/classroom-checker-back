@@ -17,17 +17,19 @@ const storage = multer.diskStorage({
     file: { originalname: any },
     cb: (arg0: null, arg1: any) => void
   ) {
-    cb(null, Date.now() + path.extname(file.originalname)); //Appending extension
+    cb(null, Date.now() + path.extname(file.originalname));
   },
 });
 
 const upload = multer({ storage });
 
 const router = express.Router();
-
-router
-  .get("/", fileController.getFile)
-  .post("/", upload.single("file"), fileController.updateFile);
+//NOTE:make it use the middleware as such:
+// 1.parse the file
+// 2.change it to entities
+// 3.compare classes between different times
+// 4.save to redis
+router.post("/", upload.single("file"), fileController.updateFile);
 
 router.post(
   "/today",

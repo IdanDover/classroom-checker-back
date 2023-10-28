@@ -1,4 +1,4 @@
-import client from "./redis";
+import client from "../redis";
 
 const getFile = async (fileTime: string) => {
   return await client.get(fileTime);
