@@ -29,4 +29,11 @@ const postTask = async (req: Request, res: Response) => {
   });
 };
 
-export = { getTask, postTask, getAllTasks };
+const deleteTask = async (req: Request, res: Response) => {
+  await taskRepo.remove(req.params.id);
+  res.status(204).json({
+    status: "success",
+  });
+};
+
+export = { getTask, postTask, getAllTasks, deleteTask };

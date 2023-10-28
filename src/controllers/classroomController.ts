@@ -29,4 +29,11 @@ const postCr = async (req: Request, res: Response) => {
   });
 };
 
-export = { getCr, postCr, getAllCr };
+const deleteCr = async (req: Request, res: Response) => {
+  await classroomRepo.remove(req.params.id);
+  res.status(204).json({
+    status: "success",
+  });
+};
+
+export = { getCr, postCr, getAllCr, deleteCr };

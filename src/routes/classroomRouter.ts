@@ -8,4 +8,6 @@ router.get("/:id", crController.getCr);
 
 router.post("/", crController.postCr);
 
+router.delete("/:id", crController.deleteCr);
+
 export = router;
