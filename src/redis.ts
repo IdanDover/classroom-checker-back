@@ -16,7 +16,9 @@ client.on("error", (err) => {
   throw new Error(err);
 });
 
-client.on("ready", () => console.log("redis is ready"));
+client.on("ready", () => {
+  console.log("redis is ready");
+});
 
 client.connect();
 
