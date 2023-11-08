@@ -6,6 +6,7 @@ const taskSchema = new Schema("task", {
   courseSet: { type: "string" },
   description: { type: "string" },
   time: { type: "string" },
+  completed: { type: "boolean" },
 });
 
 const taskRepo = new Repository(taskSchema, client);

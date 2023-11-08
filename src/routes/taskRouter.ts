@@ -8,6 +8,8 @@ router.get("/:id", taskController.getTask);
 
 router.post("/", taskController.postTask);
 
+router.put("/:id", taskController.updateTask);
+
 router.delete("/:id", taskController.deleteTask);
 
 export = router;

@@ -1,5 +1,6 @@
 import xlsx from "node-xlsx";
 import fsUtils from "./fsUtils";
+import { Classroom, Task } from "../models/appTypes";
 
 const isClassroom = (potentialClassroom: Array<any>) => {
   if (potentialClassroom.length !== 5 && potentialClassroom.length !== 6) {
@@ -25,8 +26,8 @@ const isTask = (potentialTask: Array<any>) => {
 };
 
 const parseFileToModels = (data: Array<any>, time: "noon" | "evening") => {
-  const classrooms: any[] = [];
-  const tasks: any[] = [];
+  const classrooms: Classroom[] = [];
+  const tasks: Task[] = [];
 
   data.forEach((row) => {
     if (isClassroom(row)) {
@@ -41,12 +42,13 @@ const parseFileToModels = (data: Array<any>, time: "noon" | "evening") => {
         courseName,
         comment,
         time,
+        completed: false,
       });
     }
 
     if (isTask(row)) {
       const [taskNum, courseSet, description] = row;
-      tasks.push({ taskNum, courseSet, description, time });
+      tasks.push({ taskNum, courseSet, description, time, completed: false });
     }
   });
 

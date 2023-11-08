@@ -8,6 +8,7 @@ const classroomSchema = new Schema("classroom", {
   courseName: { type: "string" },
   comment: { type: "string" },
   time: { type: "string" },
+  completed: { type: "boolean" },
 });
 
 const crRepo = new Repository(classroomSchema, client);

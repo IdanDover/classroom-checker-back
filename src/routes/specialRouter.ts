@@ -3,6 +3,7 @@ import multer from "multer";
 import path from "path";
 import specialController from "../controllers/specialController";
 import uploadData from "../../dev-data/uploadData";
+import AppError from "../errors/appError";
 
 const router = express.Router();
 
@@ -23,7 +24,22 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
+//TODO: check for xlsx mimeType
+const fileFilter = (_req: any, file: any, cb: Function) => {
+  if (
+    file.mimetype ==
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  ) {
+    cb(null, true);
+    return;
+  }
+  cb(
+    new AppError("Not an Excel file! Please upload only excel files", 400),
+    false
+  );
+};
+
+const upload = multer({ storage, fileFilter });
 
 router.post(
   "/oren",
