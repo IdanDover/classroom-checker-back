@@ -4,6 +4,7 @@ import classroomRepo from "../models/classroomModel";
 import catchAsync from "../errors/catchAsync";
 import AppError from "../errors/appError";
 import { Classroom } from "../models/appTypes";
+import ApiFeatures from "../utils/apiFeatures";
 
 const getCr = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -21,7 +22,8 @@ const getCr = catchAsync(
 );
 
 const getAllCr = catchAsync(async (req: Request, res: Response) => {
-  const classrooms = await classroomRepo.search().return.all();
+  const apiFeatures = new ApiFeatures(classroomRepo, req.query);
+  const classrooms = await apiFeatures.filter().sort().paginate().promise;
   res.status(200).json({
     status: "success",
     length: classrooms.length,

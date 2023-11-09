@@ -80,4 +80,4 @@ const parseFiles = (files: any) => {
   return { noonData, eveningData };
 };
 
-export = { isClassroom, isTask, parseFiles };
+export = { parseFiles };

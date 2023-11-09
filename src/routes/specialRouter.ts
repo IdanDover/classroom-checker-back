@@ -41,6 +41,8 @@ const fileFilter = (_req: any, file: any, cb: Function) => {
 
 const upload = multer({ storage, fileFilter });
 
+router.get("/floors", specialController.getFloors);
+
 router.post(
   "/oren",
   upload.fields([

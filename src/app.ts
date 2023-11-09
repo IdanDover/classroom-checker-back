@@ -5,9 +5,8 @@ import taskRouter from "./routes/taskRouter";
 import specialRouter from "./routes/specialRouter";
 import globalErrorHandler from "./errors/errorController";
 
-//TODO: Add the ability to get via query params
+//TODO: api filtering can be improved
 //TODO: Add authentication
-//TODO: change the functions to a middleware for oren special use case
 
 const app: Express = express();
 

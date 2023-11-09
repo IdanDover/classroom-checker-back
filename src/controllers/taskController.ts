@@ -4,6 +4,7 @@ import taskRepo from "../models/taskModel";
 import catchAsync from "../errors/catchAsync";
 import AppError from "../errors/appError";
 import { Task } from "../models/appTypes";
+import ApiFeatures from "../utils/apiFeatures";
 
 const getTask = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -22,7 +23,8 @@ const getTask = catchAsync(
 
 const getAllTasks = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const tasks = await taskRepo.search().return.all();
+    const apiFeatures = new ApiFeatures(taskRepo, req.query);
+    const tasks = await apiFeatures.filter().sort().paginate().promise;
     res.status(200).json({
       status: "success",
       length: tasks.length,

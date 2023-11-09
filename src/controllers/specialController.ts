@@ -61,6 +61,32 @@ const uploadForOren = catchAsync(
   }
 );
 
+const getFloors = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const classrooms = await crRepo.search().return.all();
+    const floors: any = {};
+    const floorNumbers: Array<number> = [];
+
+    classrooms.forEach((cr) => {
+      if (typeof cr.classNum !== "number") {
+        return;
+      }
+      const floorNum = Math.floor(cr.classNum / 100);
+      if (!floors[`floor-${floorNum}`]) {
+        floorNumbers.push(floorNum);
+        floors[`floor-${floorNum}`] = [];
+      }
+
+      floors[`floor-${floorNum}`].push(cr);
+    });
+
+    res.status(200).json({
+      status: "success",
+      data: { floorNumbers, floors },
+    });
+  }
+);
+
 const deleteAll = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const crIds = await crRepo.search().returnAllIds();
@@ -82,4 +108,4 @@ const deleteAll = catchAsync(
   }
 );
 
-export = { uploadForOren, deleteAll };
+export = { uploadForOren, getFloors, deleteAll };
