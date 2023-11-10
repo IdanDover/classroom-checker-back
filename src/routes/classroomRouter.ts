@@ -1,9 +1,25 @@
 import express from "express";
 import crController from "../controllers/classroomController";
+import middlewareUtils from "../utils/middlewareUtils";
 
 const router = express.Router();
 
-router.get("/", crController.getAllCr);
+router.get(
+  "/",
+  middlewareUtils.whiteListUrlQuery([
+    "classNum",
+    "courseSet",
+    "camera",
+    "courseName",
+    "comment",
+    "time",
+    "completed",
+    "sort",
+    "offset",
+    "count",
+  ]),
+  crController.getAllCr
+);
 router.get("/:id", crController.getCr);
 
 router.post("/", crController.postCr);

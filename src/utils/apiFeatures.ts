@@ -1,3 +1,9 @@
+import AppError from "../errors/appError";
+import {
+  FilterFunction,
+  LogicOperation,
+  PolarWord,
+} from "./../models/appTypes";
 import { AbstractSearch, Entity, Repository, Search } from "redis-om";
 
 class ApiFeatures {
@@ -17,26 +23,7 @@ class ApiFeatures {
     const excludedFields = ["sort", "offset", "count"];
     excludedFields.forEach((field) => delete filterObj[field]);
 
-    Object.entries(filterObj).forEach((entry) => {
-      const [field, filterData] = entry as [string, string];
-      const [filterFn, value, not] = filterData.split(";");
-
-      if (filterFn === "between") {
-        const [min, max] = value.split(",");
-
-        // @ts-ignore
-        this.filterQuery = this.filterQuery
-          .where(field)
-          [`${not ?? "does"}`][filterFn](min, max);
-
-        return this;
-      }
-
-      // @ts-ignore
-      this.filterQuery = this.filterQuery
-        .where(field)
-        [`${not ?? "does"}`][filterFn](value);
-    });
+    Object.entries(filterObj).forEach(this._addingFilter.bind(this));
 
     return this;
   }
@@ -78,6 +65,47 @@ class ApiFeatures {
     const query = this.sortQuery ?? this.filterQuery;
     this.promise = query.return.all();
     return this;
+  }
+
+  _addingFilter(
+    entry: [string, unknown],
+    _index: number,
+    _array: [string, unknown][]
+  ) {
+    const [field, filterData] = entry as [string, string];
+    let [filterFn, value, polarWord, logicOp] = filterData.split(";") as [
+      FilterFunction,
+      string,
+      PolarWord,
+      LogicOperation
+    ];
+
+    polarWord = polarWord || "does";
+    logicOp = logicOp || "and";
+
+    switch (filterFn) {
+      case "between":
+        const [min, max] = value.split(",");
+        this.filterQuery = this.filterQuery[logicOp](field)[polarWord][
+          filterFn
+        ](min, max);
+        break;
+      case "eq":
+      case "equal":
+      case "equals":
+      case "gt":
+      case "gte":
+      case "lt":
+      case "lte":
+        this.filterQuery =
+          this.filterQuery[logicOp](field)[polarWord][filterFn](value);
+        break;
+      default:
+        throw new AppError(
+          "The filter function you provided is not supported",
+          400
+        );
+    }
   }
 }
 

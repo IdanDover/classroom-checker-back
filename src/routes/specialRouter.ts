@@ -24,7 +24,6 @@ const storage = multer.diskStorage({
   },
 });
 
-//TODO: check for xlsx mimeType
 const fileFilter = (_req: any, file: any, cb: Function) => {
   if (
     file.mimetype ==

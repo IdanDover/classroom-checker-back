@@ -1,9 +1,23 @@
 import express from "express";
 import taskController from "../controllers/taskController";
+import middlewareUtils from "../utils/middlewareUtils";
 
 const router = express.Router();
 
-router.get("/", taskController.getAllTasks);
+router.get(
+  "/",
+  middlewareUtils.whiteListUrlQuery([
+    "taskNum",
+    "courseSet",
+    "description",
+    "time",
+    "completed",
+    "sort",
+    "offset",
+    "count",
+  ]),
+  taskController.getAllTasks
+);
 router.get("/:id", taskController.getTask);
 
 router.post("/", taskController.postTask);

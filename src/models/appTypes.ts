@@ -17,3 +17,17 @@ export interface Task extends Entity {
   time: string;
   completed: boolean;
 }
+
+export type FilterFunction =
+  | "eq"
+  | "equal"
+  | "equals"
+  | "gt"
+  | "gte"
+  | "lt"
+  | "lte"
+  | "between";
+
+export type PolarWord = "does" | "not";
+
+export type LogicOperation = "and" | "or";
