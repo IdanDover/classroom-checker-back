@@ -4,6 +4,7 @@ import path from "path";
 import specialController from "../controllers/specialController";
 import uploadData from "../../dev-data/uploadData";
 import AppError from "../errors/appError";
+import middlewareUtils from "../utils/middlewareUtils";
 
 const router = express.Router();
 
@@ -40,7 +41,11 @@ const fileFilter = (_req: any, file: any, cb: Function) => {
 
 const upload = multer({ storage, fileFilter });
 
-router.get("/floors", specialController.getFloors);
+router.get(
+  "/floors",
+  middlewareUtils.whiteListUrlQuery(["time"]),
+  specialController.getFloors
+);
 
 router.post(
   "/oren",

@@ -7,6 +7,7 @@ import specialRouter from "./routes/specialRouter";
 import globalErrorHandler from "./errors/errorController";
 
 //TODO: Add authentication
+//TODO: check where you can use Promise.all
 
 const app: Express = express();
 

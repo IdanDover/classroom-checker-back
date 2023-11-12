@@ -15,7 +15,7 @@ const whiteListUrlQuery =
         new AppError(
           `You provided a query param that is not allowed. The query you provided that is not correct is: ${unAllowedQueryParams.join(
             " ;"
-          )}, pleas try again after you fix the query`,
+          )}, please try again after you fix the query`,
           400
         )
       );

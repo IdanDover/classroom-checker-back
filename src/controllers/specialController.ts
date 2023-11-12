@@ -4,6 +4,7 @@ import crRepo from "../models/classroomModel";
 import utilsForOren from "../utils/utilsForOren";
 import AppError from "../errors/appError";
 import catchAsync from "../errors/catchAsync";
+import ApiFeatures from "../utils/apiFeatures";
 
 const uploadForOren = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -21,38 +22,51 @@ const uploadForOren = catchAsync(
       .eq("evening")
       .return.all();
 
-    crIds.forEach(async (id) => {
-      await crRepo.remove(id);
-    });
-
     const taskIds = await taskRepo.search().returnAllIds();
 
-    taskIds.forEach(async (id) => {
-      await taskRepo.remove(id);
+    const removeCrPromises = crIds.map((id) => {
+      crRepo.remove(id);
     });
 
-    oldCrs.forEach(async (cr) => {
-      cr.time = "old";
-      await crRepo.save(cr);
+    const removeTaskPromises = taskIds.map((id) => {
+      taskRepo.remove(id);
     });
+
+    const saveOldCrPromises = oldCrs.map((cr) => {
+      cr.time = "old";
+      crRepo.save(cr);
+    });
+
+    await Promise.all([
+      ...removeCrPromises,
+      ...removeTaskPromises,
+      ...saveOldCrPromises,
+    ]);
 
     const { noonData, eveningData } = utilsForOren.parseFiles(req.files);
 
-    noonData.classrooms.forEach(async (cr) => {
-      await crRepo.save(cr);
+    const saveNoonCrPromises = noonData.classrooms.map((cr) => {
+      crRepo.save(cr);
     });
 
-    eveningData.classrooms.forEach(async (cr) => {
-      await crRepo.save(cr);
+    const saveEveningCrPromises = eveningData.classrooms.map((cr) => {
+      crRepo.save(cr);
     });
 
-    noonData.tasks.forEach(async (task) => {
-      await taskRepo.save(task);
+    const saveNoonTaskPromises = noonData.tasks.map((task) => {
+      taskRepo.save(task);
     });
 
-    eveningData.tasks.forEach(async (task) => {
-      await taskRepo.save(task);
+    const saveEveningTaskPromises = eveningData.tasks.map((task) => {
+      taskRepo.save(task);
     });
+
+    await Promise.all([
+      ...saveNoonCrPromises,
+      ...saveEveningCrPromises,
+      ...saveNoonTaskPromises,
+      ...saveEveningTaskPromises,
+    ]);
 
     res.json({
       status: "success",
@@ -63,7 +77,9 @@ const uploadForOren = catchAsync(
 
 const getFloors = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const classrooms = await crRepo.search().return.all();
+    const classrooms = await new ApiFeatures(crRepo, req.query)
+      .filter()
+      .returnAll().promise;
     const floors: any = {};
     const floorNumbers: Array<number> = [];
 
@@ -96,13 +112,10 @@ const deleteAll = catchAsync(
       return next(new AppError("nothing to delete", 400));
     }
 
-    crIds.forEach(async (crId) => {
-      await crRepo.remove(crId);
-    });
+    const removeCrPromises = crIds.map((crId) => crRepo.remove(crId));
+    const removeTaskPromises = taskIds.map((taskId) => taskRepo.remove(taskId));
 
-    taskIds.forEach(async (taskId) => {
-      await taskRepo.remove(taskId);
-    });
+    await Promise.all([...removeCrPromises, ...removeTaskPromises]);
 
     res.status(204).json();
   }
