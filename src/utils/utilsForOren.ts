@@ -35,6 +35,9 @@ const parseFileToModels = (data: Array<any>, time: "noon" | "evening") => {
       if (typeof classNum !== "number") {
         classNum = Number(classNum.slice(0, 3));
       }
+      if (!camera) {
+        camera = "none";
+      }
       classrooms.push({
         classNum,
         courseSet,

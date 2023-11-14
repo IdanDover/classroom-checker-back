@@ -7,7 +7,6 @@ import specialRouter from "./routes/specialRouter";
 import globalErrorHandler from "./errors/errorController";
 
 //TODO: Add authentication
-//TODO: check where you can use Promise.all
 
 const app: Express = express();
 
@@ -16,6 +15,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan("tiny"));
 app.use(helmet());
+
+//TODO: remove this after development
+// Custom middleware to set Access-Control-Allow-Origin header
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173"); // Replace with your allowed origin
+  // You can add other CORS headers here if needed
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
 
 app.use("/api/v1/classroom", classroomRouter);
 app.use("/api/v1/task", taskRouter);

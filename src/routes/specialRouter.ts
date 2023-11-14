@@ -43,7 +43,7 @@ const upload = multer({ storage, fileFilter });
 
 router.get(
   "/floors",
-  middlewareUtils.whiteListUrlQuery(["time"]),
+  middlewareUtils.whiteListUrlQuery(["time", "sort"]),
   specialController.getFloors
 );
 

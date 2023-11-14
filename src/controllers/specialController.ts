@@ -5,6 +5,7 @@ import utilsForOren from "../utils/utilsForOren";
 import AppError from "../errors/appError";
 import catchAsync from "../errors/catchAsync";
 import ApiFeatures from "../utils/apiFeatures";
+import { EntityId } from "redis-om";
 
 const uploadForOren = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -79,6 +80,7 @@ const getFloors = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const classrooms = await new ApiFeatures(crRepo, req.query)
       .filter()
+      .sort()
       .returnAll().promise;
     const floors: any = {};
     const floorNumbers: Array<number> = [];
@@ -92,6 +94,8 @@ const getFloors = catchAsync(
         floorNumbers.push(floorNum);
         floors[`floor-${floorNum}`] = [];
       }
+
+      cr.id = cr[EntityId];
 
       floors[`floor-${floorNum}`].push(cr);
     });
