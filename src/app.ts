@@ -16,11 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("tiny"));
 app.use(helmet());
 
-//TODO: remove this after development
-// Custom middleware to set Access-Control-Allow-Origin header
+const corsUrl = process.env.FRONTEND_URL ?? "http://localhost:5173";
+
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173"); // Replace with your allowed origin
-  // You can add other CORS headers here if needed
+  res.setHeader("Access-Control-Allow-Origin", corsUrl);
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
