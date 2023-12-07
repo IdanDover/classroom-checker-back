@@ -7,6 +7,7 @@ import specialRouter from "./routes/specialRouter";
 import globalErrorHandler from "./errors/errorController";
 
 //TODO: Add authentication
+//TODO: improve the redis-om 
 
 const app: Express = express();
 

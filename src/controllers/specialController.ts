@@ -4,7 +4,7 @@ import crRepo from "../models/classroomModel";
 import utilsForOren from "../utils/utilsForOren";
 import AppError from "../errors/appError";
 import catchAsync from "../errors/catchAsync";
-import ApiFeatures from "../utils/apiFeatures";
+import ApiFeatures from "../utils/apiFeatures/apiFeatures";
 import { EntityId } from "redis-om";
 
 const uploadForOren = catchAsync(

@@ -13,7 +13,7 @@ router.get(
     "time",
     "completed",
     "sort",
-    "offset",
+    "page",
     "count",
   ]),
   taskController.getAllTasks

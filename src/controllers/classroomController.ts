@@ -4,7 +4,7 @@ import classroomRepo from "../models/classroomModel";
 import catchAsync from "../errors/catchAsync";
 import AppError from "../errors/appError";
 import { Classroom } from "../models/appTypes";
-import ApiFeatures from "../utils/apiFeatures";
+import ApiFeatures from "../utils/apiFeatures/apiFeatures";
 
 const getCr = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {

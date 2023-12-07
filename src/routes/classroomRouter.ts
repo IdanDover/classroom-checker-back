@@ -15,7 +15,7 @@ router.get(
     "time",
     "completed",
     "sort",
-    "offset",
+    "page",
     "count",
   ]),
   crController.getAllCr

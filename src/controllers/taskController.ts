@@ -4,7 +4,7 @@ import taskRepo from "../models/taskModel";
 import catchAsync from "../errors/catchAsync";
 import AppError from "../errors/appError";
 import { Task } from "../models/appTypes";
-import ApiFeatures from "../utils/apiFeatures";
+import ApiFeatures from "../utils/apiFeatures/apiFeatures";
 
 const getTask = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
