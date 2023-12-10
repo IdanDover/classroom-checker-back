@@ -1,6 +1,7 @@
 import express from "express";
 import crController from "../controllers/classroomController";
 import middlewareUtils from "../utils/middlewareUtils";
+import authController from "../controllers/authController";
 
 const router = express.Router();
 
@@ -18,6 +19,7 @@ router.get(
     "page",
     "count",
   ]),
+  authController.protect,
   crController.getAllCr
 );
 router.get("/:id", crController.getCr);

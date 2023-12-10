@@ -1,3 +1,4 @@
+import { Request } from "express";
 import { Entity } from "redis-om";
 
 export interface Classroom extends Entity {
@@ -17,6 +18,20 @@ export interface Task extends Entity {
   time: string;
   completed: boolean;
 }
+
+export interface User extends Entity {
+  firstName: "string";
+  lastName: "string";
+  email: "string";
+  password: "string";
+  role: Roles;
+}
+
+export interface AppRequest extends Request {
+  user: User;
+}
+
+export type Roles = "user" | "manager";
 
 export type FilterFunction =
   | "eq"
