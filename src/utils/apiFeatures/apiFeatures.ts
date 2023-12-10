@@ -1,7 +1,7 @@
 import { AbstractSearch, Entity, Repository, Search } from "redis-om";
 import sorter from "./sorter";
 import paginator from "./paginator";
-import filter from "./filter";
+import filter from "./filter/filter";
 
 class ApiFeatures {
   filterQuery: Search;
