@@ -27,11 +27,7 @@ export interface User extends Entity {
   role: Roles;
 }
 
-export interface AppRequest extends Request {
-  user: User;
-}
-
-export type Roles = "user" | "manager";
+export type Roles = "user" | "manager" | "admin";
 
 export type FilterFunction =
   | "eq"

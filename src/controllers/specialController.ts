@@ -107,22 +107,4 @@ const getFloors = catchAsync(
   }
 );
 
-const deleteAll = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
-    const crIds = await crRepo.search().returnAllIds();
-    const taskIds = await taskRepo.search().returnAllIds();
-
-    if (crIds.length === 0 && taskIds.length === 0) {
-      return next(new AppError("nothing to delete", 400));
-    }
-
-    const removeCrPromises = crIds.map((crId) => crRepo.remove(crId));
-    const removeTaskPromises = taskIds.map((taskId) => taskRepo.remove(taskId));
-
-    await Promise.all([...removeCrPromises, ...removeTaskPromises]);
-
-    res.status(204).json();
-  }
-);
-
-export = { uploadForOren, getFloors, deleteAll };
+export = { uploadForOren, getFloors };

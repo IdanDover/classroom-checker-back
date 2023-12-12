@@ -5,6 +5,8 @@ import authController from "../controllers/authController";
 
 const router = express.Router();
 
+router.use(authController.protect);
+
 router.get(
   "/",
   middlewareUtils.whiteListUrlQuery([
@@ -19,15 +21,23 @@ router.get(
     "page",
     "count",
   ]),
-  authController.protect,
+  authController.restrictTo("user", "manager", "admin"),
   crController.getAllCr
 );
-router.get("/:id", crController.getCr);
+router.get(
+  "/:id",
+  authController.restrictTo("user", "manager", "admin"),
+  crController.getCr
+);
 
-router.post("/", crController.postCr);
+router.post("/", authController.restrictTo("manager"), crController.postCr);
 
-router.put("/:id", crController.updateCr);
+router.put("/:id", authController.restrictTo("manager"), crController.updateCr);
 
-router.delete("/:id", crController.deleteCr);
+router.delete(
+  "/:id",
+  authController.restrictTo("manager"),
+  crController.deleteCr
+);
 
 export = router;

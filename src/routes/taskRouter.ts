@@ -1,8 +1,11 @@
 import express from "express";
 import taskController from "../controllers/taskController";
 import middlewareUtils from "../utils/middlewareUtils";
+import authController from "../controllers/authController";
 
 const router = express.Router();
+
+router.use(authController.protect);
 
 router.get(
   "/",
@@ -16,14 +19,27 @@ router.get(
     "page",
     "count",
   ]),
+  authController.restrictTo("user", "manager", "admin"),
   taskController.getAllTasks
 );
-router.get("/:id", taskController.getTask);
+router.get(
+  "/:id",
+  authController.restrictTo("user", "manager", "admin"),
+  taskController.getTask
+);
 
-router.post("/", taskController.postTask);
+router.post("/", authController.restrictTo("manager"), taskController.postTask);
 
-router.put("/:id", taskController.updateTask);
+router.put(
+  "/:id",
+  authController.restrictTo("manager"),
+  taskController.updateTask
+);
 
-router.delete("/:id", taskController.deleteTask);
+router.delete(
+  "/:id",
+  authController.restrictTo("manager"),
+  taskController.deleteTask
+);
 
 export = router;

@@ -4,7 +4,7 @@ import { NextFunction, Request, Response } from "express";
 import userRepo from "../models/userModel";
 import AppError from "../errors/appError";
 import catchAsync from "../errors/catchAsync";
-import { AppRequest, Roles, User } from "../models/appTypes";
+import { Roles, User } from "../models/appTypes";
 import { EntityId } from "redis-om";
 
 const signToken = (id: string | undefined) =>
@@ -92,7 +92,7 @@ const login = catchAsync(
 const logout = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     res.cookie("jwt", "loggedout", {
-      expires: new Date(Date.now() + 10 * 1000),
+      expires: new Date(Date.now()),
       httpOnly: true,
     });
 
@@ -101,7 +101,7 @@ const logout = catchAsync(
 );
 
 const protect = catchAsync(
-  async (req: AppRequest, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response, next: NextFunction) => {
     //1) getting token and check if it's there
     let token;
     if (
@@ -133,7 +133,6 @@ const protect = catchAsync(
       );
     }
 
-    req.user = currentUser as User;
     res.locals.user = currentUser;
     next();
   }
@@ -163,8 +162,8 @@ const isLoggedIn = async (req: Request, res: Response, next: NextFunction) => {
 
 const restrictTo =
   (...roles: Array<Roles>) =>
-  (req: AppRequest, res: Response, next: NextFunction) => {
-    if (!roles.includes(req.user.role)) {
+  (req: Request, res: Response, next: NextFunction) => {
+    if (!roles.includes(res.locals.user.role)) {
       return next(
         new AppError("You don't have permission to preform this action", 403)
       );

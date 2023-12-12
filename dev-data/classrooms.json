@@ -5,7 +5,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
     "comment": "לוודא מקרן כבוי. לנעול כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 115,
@@ -13,7 +14,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
     "comment": "לוודא מקרן כבוי. לנעול כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 301,
@@ -21,7 +23,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM ADOBE CC",
     "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 302,
@@ -29,7 +32,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
     "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 303,
@@ -37,7 +41,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "נתיבי  אודי PYTHON",
     "comment": "לימוד רגיל.",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 304,
@@ -45,7 +50,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM סייבר",
     "comment": "לוודא VLAN 300. לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 305,
@@ -53,7 +59,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
     "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 306,
@@ -61,7 +68,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM LINUX",
     "comment": "לוודא VLAN 300. לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 307,
@@ -69,7 +77,8 @@
     "camera": "WEBCAM",
     "courseName": "נתיבי  אודי PYTHON",
     "comment": "לימוד רגיל.",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 310,
@@ -77,14 +86,17 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "נתיבי  אודי PYTHON",
     "comment": "לימוד רגיל.",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 311,
     "courseSet": "SET P",
+    "camera": "none",
     "courseName": "מבחני הסמכה",
     "comment": "להדליק מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 401,
@@ -92,7 +104,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM FULL STACK",
     "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 402,
@@ -100,7 +113,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM ADOBE CC",
     "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 403,
@@ -108,7 +122,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "נתיבי  אודי PYTHON",
     "comment": "לימוד רגיל.",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 404,
@@ -116,7 +131,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "נתיבי  אודי PYTHON",
     "comment": "לבטל VLAN 500.  לימוד רגיל",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 405,
@@ -124,7 +140,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "ציבורי 3377 ANGULAR",
     "comment": "לימוד היברידי  ",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 406,
@@ -132,7 +149,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "822/167 JAVA",
     "comment": "לימוד היברידי  ",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 407,
@@ -140,7 +158,8 @@
     "camera": "מובנית",
     "courseName": "SYSTEM",
     "comment": "לוודא מקרן כבוי. לנעול כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 408,
@@ -148,7 +167,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "4578/94 FULL STACK",
     "comment": "לימוד היברידי  ",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 409,
@@ -156,7 +176,8 @@
     "camera": "WEBCAM",
     "courseName": "נתיבי  אודי PYTHON",
     "comment": "לימוד רגיל.",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 410,
@@ -164,7 +185,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "7732/10 PYTHON",
     "comment": "לימוד היברידי  ",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 411,
@@ -172,14 +194,17 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM סייבר",
     "comment": "לוודא VLAN 300. לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 412,
     "courseSet": "SET N",
+    "camera": "none",
     "courseName": "SYSTEM",
     "comment": "לוודא VLAN 500 .חלק מחשבים דולקים חלק כבויים.  לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 413,
@@ -187,14 +212,17 @@
     "camera": "מובנית",
     "courseName": "SYSTEM",
     "comment": "לוודא מקרן כבוי. לנעול כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 414,
     "courseSet": "414-416",
+    "camera": "none",
     "courseName": "SYSTEM",
     "comment": "לוודא חדרים נעולים  ",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 602,
@@ -202,7 +230,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM FULL STACK",
     "comment": "לוודא VLAN 300.  לוודא מחשבים כבויים וכיתה סגורה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 603,
@@ -210,7 +239,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
     "comment": "לוודא VLAN 300.  לוודא מחשבים כבויים וכיתה סגורה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 604,
@@ -218,7 +248,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM SRV2019 ",
     "comment": "לוודא VLAN 300. לכבות מחשבים. לסגור כיתה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
   },
   {
     "classNum": 606,
@@ -226,7 +257,251 @@
     "camera": "לוודא",
     "courseName": "SYSTEM",
     "comment": "לוודא מחשבים כבויים וכיתה סגורה",
-    "time": "noon"
+    "time": "old",
+    "completed": false
+  },
+  {
+    "classNum": 301,
+    "courseSet": "SET W",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "40411/5 ADOBE CC",
+    "comment": "לימוד היברידי",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 302,
+    "courseSet": "SET H",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 303,
+    "courseSet": "303",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "קורס בוקר מסיים ב17:00.  להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 304,
+    "courseSet": "7736/19",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "מגן CYBER",
+    "comment": "לוודא VLAN 300. לימוד היברידי",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 305,
+    "courseSet": "305",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "7732/5 PYTHON",
+    "comment": "לימוד היברידי",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 306,
+    "courseSet": "SET A",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM HELP DESK",
+    "comment": "לוודא VLAN 300. לוודא מחשבים כבויים וכיתה סגורה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 307,
+    "courseSet": "307",
+    "camera": "WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "קורס בוקר מסיים ב17:00.  להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 310,
+    "courseSet": "8855/4",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SRV2019 MCSA",
+    "comment": "לעשות VLAN 500.  לימוד היברידי.\n(קורס בוקר אולי מסיים ב17:00)",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 311,
+    "courseSet": "SET P",
+    "camera": "none",
+    "courseName": " מבחני הסמכה SYSTEM",
+    "comment": "לכבות מחשבים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 401,
+    "courseSet": "סט 401",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "7732/11 PYTHON",
+    "comment": "קורס בוקר מסיים ב17:00.  לימוד היברידי.\nבהחלפה לודא INS + 26 דיסקים",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 402,
+    "courseSet": "SET G",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM CYBER",
+    "comment": "להשאיר VLAN 300. קורס בוקר מסיים ב17:00. \nלהשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 403,
+    "courseSet": "403",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "קורס בוקר מסיים ב17:00.  להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 404,
+    "courseSet": "404",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "קורס בוקר מסיים ב17:00.  להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 405,
+    "courseSet": "405",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "לכבות מחשבים.  לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 406,
+    "courseSet": "406",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 407,
+    "courseSet": "407",
+    "camera": "מובנית",
+    "courseName": "8989/42 מצגת סיכום",
+    "comment": "לימוד היברידי",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 408,
+    "courseSet": "SET B",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM FULL STACK",
+    "comment": "להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 409,
+    "courseSet": "409",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 410,
+    "courseSet": "410",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "822/156 JAVA",
+    "comment": "לימוד היברידי",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 411,
+    "courseSet": "411",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "לכבות מחשבים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 412,
+    "courseSet": "SET N",
+    "camera": "none",
+    "courseName": "SYSTEM",
+    "comment": "לוודא VLAN 500. להשאיר מחשבים דולקים. לסגור כיתה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 413,
+    "courseSet": "413",
+    "camera": "מובנית",
+    "courseName": "הסתדרות דירקטורים\nמפגש סיום",
+    "comment": "לימוד רגיל.  ענת פילצר סומך (מדונה). מתחילים ב 16:30",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 414,
+    "courseSet": "414-416",
+    "camera": "WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "לנעול חדרים. (לנעול 414)",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 602,
+    "courseSet": "SET F",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "לוודא VLAN 300. לוודא מחשבים כבויים וכיתה סגורה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 603,
+    "courseSet": "603",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SYSTEM",
+    "comment": "לוודא VLAN 300. לוודא מחשבים כבויים וכיתה סגורה",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 604,
+    "courseSet": "8855/7",
+    "camera": "מובנית+ WEBCAM",
+    "courseName": "SRV2019 MCSA",
+    "comment": "לוודא VLAN 300.  לימוד היברידי",
+    "time": "noon",
+    "completed": false
+  },
+  {
+    "classNum": 606,
+    "courseSet": "606",
+    "camera": "לוודא",
+    "courseName": "SYSTEM",
+    "comment": "לוודא מחשבים כבויים וכיתה סגורה",
+    "time": "noon",
+    "completed": false
   },
   {
     "classNum": 114,
@@ -234,7 +509,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
     "comment": "לוודא מקרן כבוי. לנעול כיתה",
-    "time": "evening"
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 115,
@@ -242,188 +518,215 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
     "comment": "לוודא מקרן כבוי. לנעול כיתה",
-    "time": "evening"
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 301,
     "courseSet": "SET W",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "SYSTEM ADOBE CC",
-    "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "courseName": "ציבורי 3549 AWS",
+    "comment": "פתיחת קורס. לימוד היברידי. כיתה מלאה. לבדוק בקפידה",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 302,
     "courseSet": "SET H",
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
-    "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "comment": "להשאיר מחשבים דולקים.  לסגור כיתה",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 303,
     "courseSet": "303",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "נתיבי  אודי PYTHON",
-    "comment": "לימוד רגיל.",
-    "time": "evening"
+    "courseName": "נתיבי אודי PYTHON",
+    "comment": "לימוד רגיל",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 304,
-    "courseSet": "7736/21",
+    "courseSet": "7736/20",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "SYSTEM סייבר",
-    "comment": "לוודא VLAN 300. לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "courseName": "מגן סייבר",
+    "comment": "לוודא VLAN 300.  לימוד היברידי",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 305,
     "courseSet": "305",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "SYSTEM",
-    "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "courseName": "ציבורי 3780 JIRA AGILE",
+    "comment": "פתיחת קורס.  לימוד רגיל",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 306,
-    "courseSet": "SET D",
+    "courseSet": "SET A",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "SYSTEM LINUX",
-    "comment": "לוודא VLAN 300. לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "courseName": "SYSTEM HELP DESK",
+    "comment": "לוודא VLAN 300.  לוודא מחשבים כבויים וכיתה סגורה",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 307,
     "courseSet": "307",
     "camera": "WEBCAM",
-    "courseName": "נתיבי  אודי PYTHON",
-    "comment": "לימוד רגיל.",
-    "time": "evening"
+    "courseName": "נתיבי אודי PYTHON",
+    "comment": "לימוד רגיל.  לבדוק בקפידה",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 310,
     "courseSet": "310",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "נתיבי  אודי PYTHON",
-    "comment": "לימוד רגיל.",
-    "time": "evening"
+    "courseName": "נתיבי אודי PYTHON",
+    "comment": "לבטל VLAN 500.  לימוד היברידי",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 311,
     "courseSet": "SET P",
-    "courseName": "מבחני הסמכה",
-    "comment": "להדליק מחשבים. לסגור כיתה",
-    "time": "evening"
+    "camera": "none",
+    "courseName": "SYSTEM מבחנים",
+    "comment": "לכבות מחשבים.  לסגור כיתה",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 401,
     "courseSet": "SET S",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "SYSTEM FULL STACK",
-    "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "courseName": "בסמ\"ח ניתוח מערכות",
+    "comment": "לימוד רגיל.   בהחלפה לוודא INS + 26 דיסקים",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 402,
-    "courseSet": "SET X",
+    "courseSet": "SET G",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "SYSTEM ADOBE CC",
-    "comment": "לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "courseName": "משהב\"ט Linux Forensics",
+    "comment": "לוודא VLAN 300.  לימוד רגיל",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 403,
     "courseSet": "403",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "נתיבי  אודי PYTHON",
-    "comment": "לימוד רגיל.",
-    "time": "evening"
+    "courseName": "נתיבי אודי PYTHON",
+    "comment": "לימוד רגיל",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 404,
     "courseSet": "404",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "נתיבי  אודי PYTHON",
-    "comment": "לבטל VLAN 500.  לימוד רגיל",
-    "time": "evening"
+    "courseName": "נתיבי אודי PYTHON",
+    "comment": "לימוד רגיל",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 405,
-    "courseSet": "405",
+    "courseSet": "SET D",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "ציבורי 3377 ANGULAR",
-    "comment": "לימוד היברידי  ",
-    "time": "evening"
+    "courseName": "ציבורי LINUX 887",
+    "comment": "לעשות VLAN 300. לימוד היברידי. ",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 406,
     "courseSet": "406",
     "camera": "מובנית+ WEBCAM",
     "courseName": "822/167 JAVA",
-    "comment": "לימוד היברידי  ",
-    "time": "evening"
+    "comment": "לימוד היברידי",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 407,
     "courseSet": "407",
     "camera": "מובנית",
-    "courseName": "SYSTEM",
-    "comment": "לוודא מקרן כבוי. לנעול כיתה",
-    "time": "evening"
+    "courseName": "המי\"ל ניהול הצומח",
+    "comment": "לימוד היברידי",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 408,
     "courseSet": "SET B",
     "camera": "מובנית+ WEBCAM",
     "courseName": "4578/94 FULL STACK",
-    "comment": "לימוד היברידי  ",
-    "time": "evening"
+    "comment": "לימוד היברידי",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 409,
     "courseSet": "409",
     "camera": "WEBCAM",
-    "courseName": "נתיבי  אודי PYTHON",
-    "comment": "לימוד רגיל.",
-    "time": "evening"
+    "courseName": "נתיבי אודי PYTHON",
+    "comment": "לימוד רגיל",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 410,
     "courseSet": "410",
     "camera": "מובנית+ WEBCAM",
-    "courseName": "7732/10 PYTHON",
-    "comment": "לימוד היברידי  ",
-    "time": "evening"
+    "courseName": "SYSTEM",
+    "comment": "להשאיר מחשבים דולקים.  לסגור כיתה",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 411,
     "courseSet": "7736/13",
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM סייבר",
-    "comment": "לוודא VLAN 300. לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "comment": "לעשות VLAN 300. לאחר החלפה  לכבות מחשבים",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 412,
     "courseSet": "SET N",
+    "camera": "none",
     "courseName": "SYSTEM",
     "comment": "לוודא VLAN 500 .חלק מחשבים דולקים חלק כבויים.  לסגור כיתה",
-    "time": "evening"
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 413,
     "courseSet": "413",
     "camera": "מובנית",
     "courseName": "SYSTEM",
-    "comment": "לוודא מקרן כבוי. לנעול כיתה",
-    "time": "evening"
+    "comment": "לכבות מקרן. לנעול כיתה\nלהחזיר מדונה (מטען, תיק, קומפלט) לחדר סיסטם",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 414,
     "courseSet": "414-416",
+    "camera": "none",
     "courseName": "SYSTEM",
     "comment": "לוודא חדרים נעולים  ",
-    "time": "evening"
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 602,
@@ -431,7 +734,8 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM FULL STACK",
     "comment": "לוודא VLAN 300.  לוודא מחשבים כבויים וכיתה סגורה",
-    "time": "evening"
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 603,
@@ -439,15 +743,17 @@
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM",
     "comment": "לוודא VLAN 300.  לוודא מחשבים כבויים וכיתה סגורה",
-    "time": "evening"
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 604,
-    "courseSet": "8855/6",
+    "courseSet": "8855/5",
     "camera": "מובנית+ WEBCAM",
     "courseName": "SYSTEM SRV2019 ",
-    "comment": "לוודא VLAN 300. לכבות מחשבים. לסגור כיתה",
-    "time": "evening"
+    "comment": "לעשות VLAN 500.  בהחלפה לוודא INS + 27 דיסקים.\nלאחר החלפה להשאיר מחשבים דולקים",
+    "time": "evening",
+    "completed": false
   },
   {
     "classNum": 606,
@@ -455,6 +761,7 @@
     "camera": "לוודא",
     "courseName": "SYSTEM",
     "comment": "לוודא מחשבים כבויים וכיתה סגורה",
-    "time": "evening"
+    "time": "evening",
+    "completed": false
   }
 ]
