@@ -9,8 +9,9 @@ import specialRouter from "./routes/specialRouter";
 import globalErrorHandler from "./errors/errorController";
 import AppError from "./errors/appError";
 
-//TODO: need to add a path to reset password
-//TODO: need to add a path to delete user
+//TODO: make the email sender
+//TODO: make it email to a user email to reset password
+//TODO: change the models of user and classroom to make it easy to access the data
 
 const app: Express = express();
 
@@ -29,8 +30,7 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
   if (req.method === "OPTIONS") {
-    res.status(200).end();
-    return;
+    return res.status(200).end();
   }
 
   next();

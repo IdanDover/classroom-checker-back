@@ -1,11 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 import AppError from "./appError";
 
-const handleJWTError = () =>
-  new AppError("Invalid token. Please log in again", 401);
+const handleJWTError = () => new AppError("Invalid token. Please log in", 401);
 
 const handleJWTExpiredError = () =>
-  new AppError("Your token has expired! Please log in again", 401);
+  new AppError("Your token has expired! Please log in", 401);
 
 const sendErrorDev = (err: AppError, req: Request, res: Response) => {
   if (req.originalUrl.startsWith("/api")) {
